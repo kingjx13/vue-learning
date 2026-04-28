@@ -1,13 +1,11 @@
-# Frontend Learning / 前端学习项目
+# 前端学习项目 / Frontend Learning
 
-一个包含多个前端学习项目的 Monorepo 仓库，使用 npm Workspaces 管理。
+---
 
 ## 📦 项目列表
 
 ### packages/vue-learning
 Vue 3 用户管理系统 - 学习 Vue 3 的实践项目
-
-**仓库**: [https://github.com/jinxin-code/vue-learning](https://github.com/jinxin-code/vue-learning)
 
 **功能**:
 - 用户列表展示（卡片形式）
@@ -45,7 +43,7 @@ UniApp 跨平台用户管理系统 - 一套代码多端运行
 cd packages/uniapp-learning
 npm install
 npm run dev:h5        # H5 开发
-npm run dev:mp-weixin   # 微信小程序开发
+npm run dev:mp-weixin # 微信小程序开发
 ```
 
 ---
@@ -59,21 +57,23 @@ npm install
 
 ### 开发命令
 ```bash
-# Vue 项目开发
-npm run dev:vue
-
-# UniApp H5 开发
-npm run dev:uniapp
+npm run dev:vue       # Vue 项目开发
+npm run dev:uniapp    # UniApp H5 开发
 ```
 
 ### 构建命令
 ```bash
-# Vue 项目构建
-npm run build:vue
-
-# UniApp H5 构建
-npm run build:uniapp
+npm run build:vue          # Vue 项目构建
+npm run build:uniapp       # UniApp H5 构建
+npm run build:uniapp:mp     # 微信小程序构建
 ```
+
+### 清理命令
+```bash
+npm run clean              # 清理所有构建产物
+```
+
+---
 
 ## 📁 目录结构
 
@@ -82,15 +82,19 @@ frontend-learning/
 ├── packages/
 │   ├── vue-learning/      # Vue 3 项目
 │   │   ├── src/
-│   │   ├── package.json
-│   │   └── ...
+│   │   ├── public/
+│   │   └── package.json
 │   └── uniapp-learning/   # UniApp 项目
 │       ├── src/
-│       ├── package.json
-│       └── ...
-├── package.json           # 根目录（工作区配置）
+│       └── package.json
+├── .vscode/
+├── package.json           # 根目录（npm Workspaces）
+├── .npmrc
+├── .gitignore
 └── README.md
 ```
+
+---
 
 ## 🌐 支持平台
 
@@ -103,12 +107,144 @@ frontend-learning/
 - ✅ iOS (需通过 HBuilderX 打包)
 - ✅ Android (需通过 HBuilderX 打包)
 
+---
+
 ## 📚 学习资源
 
 - [Vue 3 官方文档](https://vuejs.org/)
 - [UniApp 官方文档](https://uniapp.dcloud.net.cn/)
 - [Vite 官方文档](https://vitejs.dev/)
 - [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+
+---
+
+## 📝 License
+
+MIT License
+
+---
+
+<hr>
+
+# Frontend Learning / 前端学习项目
+
+---
+
+## 📦 Projects
+
+### packages/vue-learning
+Vue 3 User Management System - A hands-on learning project for Vue 3
+
+**Features**:
+- User list display (card layout)
+- User detail view
+- Real-time search (by name or username)
+- Multi-filter support (first letter, email domain, name length)
+- Full CRUD operations
+- Form validation
+
+**Tech Stack**: Vue 3 + Vue Router 4 + Vite + Fetch API
+
+**Quick Start**:
+```bash
+cd packages/vue-learning
+npm install
+npm run dev
+```
+
+---
+
+### packages/uniapp-learning
+UniApp Cross-Platform User Management System - One codebase, multiple platforms
+
+**Features**:
+- User list display
+- User detail view
+- Search and filters
+- Full CRUD operations
+- Support for H5, WeChat Mini Program, iOS, Android
+
+**Tech Stack**: UniApp (Vue 3) + TypeScript + Vite + uni.request
+
+**Quick Start**:
+```bash
+cd packages/uniapp-learning
+npm install
+npm run dev:h5          # H5 development
+npm run dev:mp-weixin   # WeChat Mini Program development
+```
+
+---
+
+## 🛠️ Monorepo Management
+
+### Install Dependencies
+```bash
+npm install
+```
+
+### Development Scripts
+```bash
+npm run dev:vue       # Vue project development
+npm run dev:uniapp    # UniApp H5 development
+```
+
+### Build Scripts
+```bash
+npm run build:vue         # Vue project build
+npm run build:uniapp      # UniApp H5 build
+npm run build:uniapp:mp   # WeChat Mini Program build
+```
+
+### Clean Script
+```bash
+npm run clean             # Clean all build outputs
+```
+
+---
+
+## 📁 Directory Structure
+
+```
+frontend-learning/
+├── packages/
+│   ├── vue-learning/      # Vue 3 project
+│   │   ├── src/
+│   │   ├── public/
+│   │   └── package.json
+│   └── uniapp-learning/   # UniApp project
+│       ├── src/
+│       └── package.json
+├── .vscode/
+├── package.json           # Root (npm Workspaces)
+├── .npmrc
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🌐 Supported Platforms
+
+### Vue Learning
+- ✅ Web (Chrome, Firefox, Safari, Edge)
+
+### UniApp Learning
+- ✅ H5
+- ✅ WeChat Mini Program
+- ✅ iOS (requires HBuilderX packaging)
+- ✅ Android (requires HBuilderX packaging)
+
+---
+
+## 📚 Learning Resources
+
+- [Vue 3 Documentation](https://vuejs.org/)
+- [UniApp Documentation](https://uniapp.dcloud.net.cn/)
+- [Vite Documentation](https://vitejs.dev/)
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+
+---
 
 ## 📝 License
 
